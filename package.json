@@ -5,7 +5,7 @@
   "private": true,
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/nmeaney/wavebreak-coding-exercise"
   },
   "author": "Noel Meaney <nmeaney.tech@gmail.com> (https://twitter.com/nmeaneytech)",
   "license": "MIT",
