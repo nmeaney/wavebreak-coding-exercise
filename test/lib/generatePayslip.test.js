@@ -18,9 +18,9 @@ employees.forEach(function(employee, index) {
 });
 
 // Test invalid input object returns emptyObject
-test.deepEqual(emptyObject, generatePayslip(null), 'generatePayslip returns error if argument is not an object');
+test.deepEqual(emptyObject, generatePayslip(null), 'generatePayslip returns emptyObject if argument is not an object');
 
 // Test missing field in input object returns emptyObject
 let alteredEmployee = employees[1];
 delete alteredEmployee.pensionRate;
-test.deepEqual(emptyObject, generatePayslip(alteredEmployee), 'generatePayslip returns error if argument is missing a required field');
+test.deepEqual(emptyObject, generatePayslip(alteredEmployee), 'generatePayslip returns empty object if argument is missing a required field');

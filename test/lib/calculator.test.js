@@ -32,4 +32,4 @@ test.equal(expectedMonthlyIncomeRounded, calculator(60055.20, 10).grossIncome, '
 
 // Test invalid argument
 test.deepEqual(emptyObject, calculator(), 'calculator returns empty object if no arguments supplied');
-test.deepEqual(emptyObject, calculator(notNumber, notNumber), 'calculator returns zero if argument is not a number');
+test.deepEqual(emptyObject, calculator(notNumber, notNumber), 'calculator returns empty object if argument is not a number');
