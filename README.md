@@ -17,7 +17,7 @@
 1. Clone repo:
 
   ```bash
-  git clone ...
+  git clone https://github.com/nmeaney/wavebreak-coding-exercise
   ```
 
 2. Install dependencies:
