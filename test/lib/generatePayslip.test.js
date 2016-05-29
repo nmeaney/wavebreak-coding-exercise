@@ -1,19 +1,21 @@
 const test = require('tap');
 const taxTable = require('australian-tax-rate');
 
-// Package under test
-const generatePayslip = require('../lib/generatePayslip.js').generatePayslip;
+// Module under test
+const generatePayslip = require('../../lib/generatePayslip.js').generatePayslip;
 
 // Test data
-const employees = require('../data/employees');
-const payslips = require('../data/expectedPayslips');
+const employees = require('../../data/inputEmployees.json');
+const payslips = require('../../data/outputPayslipsExpected.json');
 
 // Support values
 const emptyObject = {};
 
 // Test correct operation
-test.deepEqual(payslips[0], generatePayslip(employees[0]), 'Payslip generated correctly for employee 1');
-test.deepEqual(payslips[1], generatePayslip(employees[1]), 'Payslip generated correctly for employee 2');
+employees.forEach(function(employee, index) {
+
+  test.deepEqual(payslips[index], generatePayslip(employee), `Payslip generated correctly for employee ${index}`);
+});
 
 // Test invalid input object returns emptyObject
 test.deepEqual(emptyObject, generatePayslip(null), 'generatePayslip returns error if argument is not an object');

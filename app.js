@@ -7,15 +7,15 @@ const jsonStream = require('JSONStream');
 const generatePayslip = require('./lib/generatePayslip').generatePayslip;
 
 // Input & output files
-const employeesInput = fs.createReadStream(`${process.cwd()}/data/employees.json`);
-const payslipsOutput = fs.createWriteStream(`${process.cwd()}/data/payslips.json`);
+const inputEmployees = fs.createReadStream(`${process.cwd()}/data/inputEmployees.json`);
+const outputPayslips = fs.createWriteStream(`${process.cwd()}/data/outputPayslips.json`);
 
 // Process each employee record into a payslip
-employeesInput
+inputEmployees
   .pipe(jsonStream.parse('*'))
   .pipe(es.mapSync((employee) => generatePayslip(employee)))
   .pipe(jsonStream.stringify())
-  .pipe(payslipsOutput)
+  .pipe(outputPayslips)
   .on('error', function(err) {
 
     console.error(err);

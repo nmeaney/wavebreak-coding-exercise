@@ -1,12 +1,12 @@
 const test = require('tap');
 const taxTable = require('australian-tax-rate');
 
-// Test data
-const employees = require('../data/employees.json');
-const payslips = require('../data/expectedPayslips.json');
+// Module under test
+const calculator = require('../../lib/calculator.js').calculator;
 
-// Package under test
-const calculator = require('../lib/calculator.js').calculator;
+// Test data
+const employees = require('../../data/inputEmployees.json');
+const payslips = require('../../data/outputPayslipsExpected.json');
 
 // Support values
 const emptyObject = {};
@@ -20,7 +20,7 @@ employees.forEach(function(employee, index) {
 
     'grossIncome': payslips[index].grossIncome,
     'incomeTax': payslips[index].incomeTax,
-    'pensionContribution': payslips[index].super
+    'pension': payslips[index].pension
   };
 
   test.deepEqual(expectedOutput, calculator(employee.annualSalary, employee.pensionRate), 'calculator calculated correctly');

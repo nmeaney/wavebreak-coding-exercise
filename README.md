@@ -1,30 +1,30 @@
 # Solution Notes
 
-***IMPORTANT - Use Node.js version 6.0.0+ for support of ES6 features.***
-
-[Node.js Version 6.2.0](https://nodejs.org/dist/v6.2.0/node-v6.2.0.pkg)
-
 
 ### Assumptions
 
+- I used [Node.js version 6.0.0+](https://nodejs.org/dist/v6.2.0/node-v6.2.0.pkg) for ES6 support.
+
+- I didn't do any processing of Pay Period.
+
 - I used JSON for input and output files.
 
-- I didn't do any processing on Pay Period. I just piped it from input to output.
+- I used [node-tap](http://www.node-tap.org/) for testing.
 
 
 ### Installation
 
-Clone repo:
+1. Clone repo:
 
-```bash
-git clone ...
-```
+  ```bash
+  git clone ...
+  ```
 
-Install dependencies:
+2. Install dependencies:
 
-```bash
-npm install
-```
+  ```bash
+  npm install
+  ```
 
 ### Testing
 
@@ -41,3 +41,13 @@ Run program:
 ```
 npm start
 ```
+
+Results are written to `/data/outputPayslips.json`.
+
+
+### Folder Structure
+
+- `/data`  - Input & output files.
+- `/lib`   - Support files.
+- `/test`  - Test files.
+- `app.js` - Main file.

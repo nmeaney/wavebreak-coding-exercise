@@ -5,7 +5,7 @@
     "grossIncome": 5004,
     "incomeTax": 922,
     "netIncome": 4082,
-    "super": 450
+    "pension": 450
   },
   {
     "name": "Ryan Chen",
@@ -13,6 +13,6 @@
     "grossIncome": 10000,
     "incomeTax": 2696,
     "netIncome": 7304,
-    "super": 1000
+    "pension": 1000
   }
 ]

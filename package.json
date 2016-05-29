@@ -17,13 +17,10 @@
     "start": "node app.js",
     "test": "tap test/**/*.js --cov"
   },
-  "keywords": [
-    "wavebreak"
-  ],
   "dependencies": {
-    "JSONStream": "1.1.1",
     "australian-tax-rate": "1.0.0",
-    "event-stream": "3.3.2"
+    "event-stream": "3.3.2",
+    "JSONStream": "1.1.1"
   },
   "devDependencies": {
     "tap": "5.7.2"
