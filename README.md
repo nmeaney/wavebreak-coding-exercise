@@ -1,15 +1,20 @@
 # Solution Notes
 
 
+### Prerequisites
+
+You have git, node and npm installed.
+
+*Use [Node.js version 6.0.0+](https://nodejs.org/dist/v6.2.0/node-v6.2.0.pkg) for ES6 support.*
+
+
 ### Assumptions & Notes
 
-- Used [Node.js version 6.0.0+](https://nodejs.org/dist/v6.2.0/node-v6.2.0.pkg) for ES6 support.
+- I didn't do any processing of Pay Period.
 
-- Didn't do any processing of Pay Period.
+- I used JSON for input and output files.
 
-- Used JSON for input and output files.
-
-- Used [node-tap](http://www.node-tap.org/) for testing.
+- I used [node-tap](http://www.node-tap.org/) for testing.
 
 
 ### Installation
