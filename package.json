@@ -15,7 +15,7 @@
   },
   "scripts": {
     "start": "node app.js",
-    "test": "tap test/calculator.test.js"
+    "test": "tap test/**/*.js --cov"
   },
   "keywords": [
     "wavebreak"

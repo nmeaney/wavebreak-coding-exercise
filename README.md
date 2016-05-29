@@ -8,6 +8,7 @@
 ### Assumptions
 
 - I used JSON for input and output files.
+
 - I didn't do any processing on Pay Period. I just piped it from input to output.
 
 
