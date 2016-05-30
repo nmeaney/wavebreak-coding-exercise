@@ -12,12 +12,18 @@ const outputPayslips = fs.createWriteStream(`${process.cwd()}/data/outputPayslip
 
 // Process each employee record into a payslip
 inputEmployees
+  // Stream employee object from JSON file
   .pipe(jsonStream.parse('*'))
+  // Generate payslip object
   .pipe(es.mapSync((employee) => generatePayslip(employee)))
+  // Prepare payslip for text output
   .pipe(jsonStream.stringify())
+  // Output to file
   .pipe(outputPayslips)
-  .on('error', function(err) {
+  // Log any errors but continue processing
+  .on('error', (err) => console.error(err));
 
-    console.error(err);
-    process.exit(-1);
-  });
+outputPayslips.on('close', function() {
+
+  console.log('FINISHED.');
+});
