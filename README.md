@@ -1,5 +1,5 @@
-# Solution Notes
-
+Solution Notes
+==============
 
 ### Prerequisites
 
